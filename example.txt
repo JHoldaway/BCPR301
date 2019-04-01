@@ -1,0 +1,39 @@
+@startuml
+class ClassBuilder {
+  name: string
+  attributes: string
+  methods: string
+  relationships: string
+  add_class_attributes(): new_attribute
+  add_class_methods(): new_method
+  add_relationship(): new_relationship
+  print_class(): string
+}
+
+class Attribute {
+  name: string
+  type: string
+  find_type(new_type): string
+  __str__(): string
+}
+
+class Method {
+  name: string
+  input: string
+  return_type: string
+  get_return(new_return): string
+  __str__(): string
+}
+
+class Relationship {
+  name: string
+  type: string
+  get_type(new_type): string
+  __str__(): string
+}
+
+ClassBuilder *-- Attribute
+ClassBuilder *-- Method
+ClassBuilder *-- Relationship
+
+@enduml
