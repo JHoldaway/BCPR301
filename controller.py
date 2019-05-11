@@ -13,10 +13,10 @@ class Controller(Cmd):
     source_file = None
     module_directory = None
 
-    # def __init__(self):
-    #    """Initialises the controller."""
-    #    self.my_interpreter = Interpreter()
-    #    self.the_window = None
+    def __init__(self):
+        """Initialises the controller."""
+        self.my_interpreter = Interpreter()
+        self.the_window = None
 
     def _open_files(self):
         """Method for opening files from GUI"""
@@ -129,9 +129,6 @@ class Controller(Cmd):
             print("Files Interpreted")
 
     def do_quit(self, args):
-        return True
-
-    def do_EOF(self, args):
         return True
 
     def help_source(self):
